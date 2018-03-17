@@ -21,8 +21,10 @@ if [ "$1" == "_docker_" ]; then
         && ./configure --prefix=/ccminer \
         && make -j8 \
         && make install \
+        && make clean \
         && strip /ccminer/bin/ccminer \
         && chown -R $uid /ccminer \
+        && chown -R $uid . \
         && exit 0
 
     # If error
