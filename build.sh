@@ -32,7 +32,7 @@ fi
 ### Outside Docker ###
 
 # Download latest ccminer from GIT
-[ ! -d ccminer ] && git pull https://github.com/tpruvot/ccminer.git
+[ ! -d ccminer ] && git clone https://github.com/tpruvot/ccminer.git
 
 # Install in CUDA devel container and create a new image
 nvidia-docker run -ti \
