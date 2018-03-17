@@ -15,7 +15,7 @@ if [ "$1" == "_docker_" ]; then
     # Install toolchain and build
     apt-get update \
         && apt-get -y install \
-            autoconf libcurl4-openssl-dev git build-essential libssl-dev \
+            autoconf libcurl4-openssl-dev build-essential libssl-dev \
         && cd /opt/ccminer \
         && ./autogen.sh \
         && ./configure --prefix=/ccminer \

@@ -23,7 +23,8 @@ WALLET=4449w4X8mYfF6Pgkb2SdbuQGHssMqsQt3Jr1wpd3FRnwRuBc4aTudhB7thN7rZwWe7X6WAxub
 
 ##################
 
-nvidia-docker run --rm -t wallneradam/docker-ccminer ccminer \
+nvidia-docker run --rm -ti --name ccminer --hostname ccminer \
+    wallneradam/docker-ccminer ccminer \
     -a cryptonight \
     -o stratum+tcp://${POOL}:${PORT} \
     -u ${WALLET} \
